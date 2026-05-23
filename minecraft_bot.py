@@ -58,3 +58,6 @@ for i in range(5):
     click("grif_4")
     wait(1)
 print("[OK] Done!")
+print("[~] Keeping alive...")
+while True:
+    time.sleep(60)
