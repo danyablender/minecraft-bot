@@ -1,0 +1,18 @@
+name: Minecraft Bot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: self-hosted
+
+    steps:
+      - name: Отримати код
+        uses: actions/checkout@v4
+
+      - name: Встановити залежності
+        run: pip install pyautogui pygetwindow keyboard
+
+      - name: Запустити бота
+        run: python minecraft_bot.py
